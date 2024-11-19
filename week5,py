@@ -1,0 +1,76 @@
+# Base Class: Gadget
+class Gadget:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def info(self):
+        return f"{self.brand} {self.model}"
+
+# Derived Class: Smartphone
+class Smartphone(Gadget):
+    def __init__(self, brand, model, os, storage, camera_megapixels):
+        super().__init__(brand, model)
+        self.os = os
+        self.storage = storage
+        self.camera_megapixels = camera_megapixels
+
+    def take_photo(self):
+        return f"Taking a photo with {self.camera_megapixels}MP camera."
+
+    def install_app(self, app_name):
+        return f"Installing {app_name} on {self.model}."
+
+# Usage
+my_phone = Smartphone("Samsung", "Galaxy S22", "Android", "256GB", 108)
+
+print(my_phone.info())                # Output: Samsung Galaxy S22
+print(my_phone.take_photo())          # Output: Taking a photo with 108MP camera.
+print(my_phone.install_app("WhatsApp"))  # Output: Installing WhatsApp on Galaxy S22.
+
+
+
+
+
+
+
+
+##polymorphism
+
+
+
+# Base Class: Vehicle
+class Vehicle:
+    def move(self):
+        pass
+
+# Derived Class: Car
+class Car(Vehicle):
+    def move(self):
+        return "Driving 🚗"
+
+# Derived Class: Plane
+class Plane(Vehicle):
+    def move(self):
+        return "Flying ✈️"
+
+# Derived Class: Boat
+class Boat(Vehicle):
+    def move(self):
+        return "Sailing 🚤"
+
+# Usage
+vehicles = [Car(), Plane(), Boat()]
+
+for vehicle in vehicles:
+    print(vehicle.move())
+
+
+
+
+
+
+
+
+
+
