@@ -59,6 +59,34 @@ Ensure your submission is complete with all necessary code and explanations.
 
 
 
+"""sales_data.csv file
+
+
+Date,Product,Category,Units Sold,Unit Price,Total Revenue,Region
+2024-01-01,Shampoo,Personal Care,100,5.50,550,North
+2024-01-02,Soap,Personal Care,150,2.00,300,South
+2024-01-03,Rice,Food,200,1.50,300,East
+2024-01-04,Cereal,Food,120,3.75,450,West
+2024-01-05,Lotion,Personal Care,80,7.50,600,North
+2024-01-06,Bread,Food,300,2.25,675,South
+2024-01-07,Toothpaste,Personal Care,90,3.00,270,East
+2024-01-08,Juice,Beverages,180,1.75,315,West
+2024-01-09,Cookies,Food,220,2.50,550,North
+2024-01-10,Milk,Beverages,150,1.25,187.5,South
+
+
+"""
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -147,4 +175,97 @@ print("1. Total Revenue shows steady variation over the time period in the datas
 print("2. Food and Personal Care categories have higher average Units Sold compared to others.")
 print("3. Unit Prices are concentrated mostly between $1 and $8.")
 print("4. A strong positive correlation exists between Units Sold and Total Revenue.")
+
+###
+"""
+OUTPUT
+
+
+Dataset loaded successfully!
+
+First Few Rows of the Dataset:
+         Date  Product       Category  Units Sold  Unit Price  Total Revenue Region
+0  2024-01-01  Shampoo  Personal Care         100        5.50          550.0  North
+1  2024-01-02     Soap  Personal Care         150        2.00          300.0  South
+2  2024-01-03     Rice           Food         200        1.50          300.0   East
+3  2024-01-04   Cereal           Food         120        3.75          450.0   West
+4  2024-01-05   Lotion  Personal Care          80        7.50          600.0  North
+
+Dataset Information:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 10 entries, 0 to 9
+Data columns (total 7 columns):
+ #   Column         Non-Null Count  Dtype
+---  ------         --------------  -----
+ 0   Date           10 non-null     object
+ 1   Product        10 non-null     object
+ 2   Category       10 non-null     object
+ 3   Units Sold     10 non-null     int64
+ 4   Unit Price     10 non-null     float64
+ 5   Total Revenue  10 non-null     float64
+ 6   Region         10 non-null     object
+dtypes: float64(2), int64(1), object(4)
+memory usage: 692.0+ bytes
+None
+
+Missing Values Count:
+Date             0
+Product          0
+Category         0
+Units Sold       0
+Unit Price       0
+Total Revenue    0
+Region           0
+dtype: int64
+
+Basic Statistics:
+       Units Sold  Unit Price  Total Revenue
+count   10.000000   10.000000      10.000000
+mean   159.000000    3.100000     419.750000
+std     68.223489    1.990254     166.167795
+min     80.000000    1.250000     187.500000
+25%    105.000000    1.812500     300.000000
+50%    150.000000    2.375000     382.500000
+75%    195.000000    3.562500     550.000000
+max    300.000000    7.500000     675.000000
+
+Average Units Sold per Category:
+Category
+Beverages        165.0
+Food             210.0
+Personal Care    105.0
+Name: Units Sold, dtype: float64
+c:\Users\Joshua\Documents\Python\plpweek7ass.py:121: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.barplot(x=category_group.index, y=category_group.values, palette='viridis')
+
+Observations and Insights:
+1. Total Revenue shows steady variation over the time period in the dataset.
+2. Food and Personal Care categories have higher average Units Sold compared to others.
+3. Unit Prices are concentrated mostly between $1 and $8.
+4. A strong positive correlation exists between Units Sold and Total Revenue."""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
